@@ -38,4 +38,14 @@ class CsvReader
        end
        matches_t
      end
+     
+    def priceSearch(limit)
+       matches_p = []
+       @books_in_stock.each do |isbn, book|
+         if book.price < limit
+            matches_p << book
+         end
+       end
+       matches_p
+     end
 end 
