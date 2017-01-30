@@ -1,4 +1,5 @@
 require_relative 'csv_reader'
+require 'json'
 
 data_source = CsvReader.new(ARGV[0])
 data_source.loadData

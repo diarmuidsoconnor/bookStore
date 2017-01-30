@@ -29,4 +29,13 @@ class CsvReader
        matches
      end
 
+    def titleSearch(name)
+       matches_t = []
+       @books_in_stock.each do |isbn, book|
+         if book.title == name
+            matches_t << book
+         end
+       end
+       matches_t
+     end
 end 
